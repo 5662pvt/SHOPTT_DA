@@ -1,0 +1,32 @@
+﻿@model IEnumerable<SHOPTT_DA.Models.LoaiSP>
+
+<hr />
+<div class="dropdown a">
+    <h4  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Loai San Pham &#8801;
+    </h4>
+    @*<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+    </div>*@
+    <div class="dropdown-menu b" aria-labelledby="dropdownMenuButton" style="text-align:left;">
+        @foreach (var item in Model)
+        {
+            
+            <a href="@Url.Action("SPTheoLoai", "Sneaker", new { id = item.MaLoai })" class="dropdown-item" style="margin-left:5px; text-decoration:none; color:black;">
+                &#10147;	@item.TenLoai
+            <hr />
+            </a>
+            
+        }
+   </div>
+</div>
+<hr />
+<style>
+    .a:hover .b{
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-start;
+    }
+</style>

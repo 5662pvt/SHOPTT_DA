@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="~/Content/shop-homepage.css" rel="stylesheet">
+   <!-- IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Start Bootstrap</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        @Html.Action("GioHangPartial", "Giohang")
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9" style="width:100%;">
+                <div class="row carousel-holder">
+                    <div class="col-md-12">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img class="slide-image" src="~/images/templatemo_header_bg.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="~/images/templatemo_header_bg1.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="~/images/templatemo_header_bg2.jpg" alt="">
+                                </div>
+                            </div>
+                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <hr  style="color: #e96161"/>
+                <div>
+                <div class="col-md-2" style="margin-left: -20px; margin-right: 100px; margin-top: 0px;">
+                    @Html.Action("LoaiSanPham", "Sneaker")
+
+                    @Html.Action("ThuongHieu", "Sneaker")
+                </div>
+
+                @*<h2 style="color:red ; text-align: center"> DO THE THAO</h2>*@
+                <div>
+                    @RenderBody()
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+
+    <div class="container">
+        <hr>
+    </div>
+    <!-- /.container -->
+    <!-- Footer -->
+    <div class="section_footer" style="background-color: #272222; color: aliceblue ">
+        <div class="container" >
+            <div class="mail_section">
+                <div class="row" style="margin-top: 15px;">
+                    <div class="col-sm-6 col-lg-2">
+                        <div><a href="#"><img src="~/images/footer-logo.png"></a></div>
+                    </div>
+                    <div class="col-sm-6 col-lg-2">
+                        <div class="footer-logo" ><img src="~/images/phone-icon.png"><span class="map_text">        (71) 1234567890</span></div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="footer-logo"><img src="~/images/email-icon.png"><span class="map_text">          Demo@gmail.com</span></div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="social_icon">
+                            <ul>
+                                <li>
+                                   
+                                    <a  href="#"><img src="~/images/fb-icon.png"></a>
+                                </li>
+                                <li><a href="#"><img src="~/images/twitter-icon.png"></a></li>
+                                <li><a href="#"><img src="~/images/in-icon.png"></a></li>
+                                <li><a href="#"><img src="~/images/google-icon.png"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+            <div class="footer_section_2" style="margin-bottom: 50px;">
+                <div class="row">
+                    <div class="col-sm-4 col-lg-2">
+                        <p class="dummy_text">      ipsum dolor sit amet, consectetur ipsum dolor sit amet, consectetur  ipsum dolor sit amet </p>
+                    </div>
+                    <div class="col-sm-4 col-lg-2">
+                        <h2 class="shop_text">Address </h2>
+                        <div class="image-icon"><img src="~/images/map-icon.png"><span class="pet_text">No 40 Baria Sreet 15/2 NewYork City, NY, United States.</span></div>
+                    </div>
+                    <div class="col-sm-4 col-md-6 col-lg-3">
+                        <h2 class="shop_text">Our Company </h2>
+                        <div class="delivery_text">
+                            <ul>
+                                <li>Delivery</li>
+                                <li>Legal Notice</li>
+                                <li>About us</li>
+                                <li>Secure payment</li>
+                                <li>Contact us</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <h2 class="adderess_text">Products</h2>
+                        <div class="delivery_text">
+                            <ul>
+                                <li>Prices drop</li>
+                                <li>New products</li>
+                                <li>Best sales</li>
+                                <li>Contact us</li>
+                                <li>Sitemap</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-2">
+                        <h2 class="adderess_text">Newsletter</h2>
+                        <div class="form-group">
+                            <input type="text" class="enter_email" placeholder="Enter Your email" name="Name">
+                        </div>
+                        <button class="subscribr_bt">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- jQuery -->
+    <script src="~/Scripts/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

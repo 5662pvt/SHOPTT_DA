@@ -1,0 +1,40 @@
+﻿@model IEnumerable<SHOPTT_DA.Models.SanPham>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2 >CHUYEN MUC</h2>
+
+<div class="row">
+    @foreach (var sanPham in Model)
+    {
+    <div class="col-sm-3 col-lg-3 col-md-3 his" style="margin:10px;" >
+        <div class="thumbnail " style="display:flex; flex-direction:column; justify-content:flex-start; flex-wrap:nowrap ; border-width:1px; border-style:double;">
+            <img src="~/product_imgs/@sanPham.Hinh" alt="@sanPham.TenSP" style="width:50%; float:left" />
+            <div style="display:flex; flex-direction:column; justify-content:flex-start; flex-wrap:nowrap">
+                <a href="@Url.Action("Details", "Sneaker", new { id = sanPham. MaSP})">
+                    <span>@sanPham.TenSP</span>
+                </a>
+
+                <div class="ratings">
+                    <p class="pull-right"> 12 reviews </p>
+                    <p>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+</div> 
+<style>
+    .his:hover{
+        transform: scale(1.1);
+        box-shadow: 5px 5px 5px  #808080;
+    }
+</style>

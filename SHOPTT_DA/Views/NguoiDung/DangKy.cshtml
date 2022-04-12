@@ -1,0 +1,102 @@
+﻿
+@{
+    ViewBag.Title = "DangKy";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<table align="center">
+    <h2 align="center"> TRANG DĂNG KÝ THÀNH VIÊN</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        <tr style="height:40px">
+            <td>
+                Họ tên khách hàng:
+            </td>
+            <td>
+                @Html.TextBox("HotenKH")
+                @ViewData["Loi1"]
+            </td>
+        </tr>
+
+        <tr style="height:40px">
+            <td>
+                Ten dang ky:
+            </td>
+            <td>
+                @Html.TextBox("TenDN")
+                @ViewData["Loi2"]
+            </td>
+        </tr>
+
+        <tr style="height:40px">
+            <td>
+                MAT KHAU:
+            </td>
+            <td>
+                @Html.TextBox("MatKhau")
+                @ViewData["Loi3"]
+            </td>
+        </tr>
+
+        <tr style="height:40px">
+            <td>
+                NHAP LAI MAT KHAU:
+            </td>
+            <td>
+                @Html.TextBox("MatKhauNhapLai")
+                @ViewData["Loi4"]
+            </td>
+        </tr>
+
+        <tr style="height:40px">
+            <td>
+                SDT:
+            </td>
+            <td>
+                @Html.TextBox("SDT")
+                @ViewData["Loi5"]
+            </td>
+        </tr>
+
+        <tr style="height:40px">
+            <td>
+                EMAIL:
+            </td>
+            <td>
+                @Html.TextBox("Email")
+                @ViewData["Loi6"]
+            </td>
+        </tr>
+
+        <tr style="height:40px">
+            <td>
+                DIA CHI:
+            </td>
+            <td>
+                @Html.TextBox("DiaChi")
+                @ViewData["Loi7"]
+            </td>
+        </tr>
+
+        <tr style="height:40px">
+            <td>
+                NGAY SINH:
+            </td>
+            <td>
+                <input type="date" name="NgaySinh" />
+            </td>
+        </tr>
+
+        <tr style="height:40px">
+            <td>
+                DANG KI:
+            </td>
+            <td>
+                <input type="submit" name="dangki" />
+            </td>
+        </tr>
+    }
+</table>
+

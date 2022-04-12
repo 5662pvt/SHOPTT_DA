@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2>THONG TIN CHI TIET SAN PHAM</h2>
+<h3>Tên SP : @Model.TenSP</h3>
+
+<div class="col-sm-6 col-lg-6 col-md-6">
+    <div>
+        <img src="~/product_imgs/@Model.Hinh " width="100%" alt="@Model.TenSP" />
+    </div>
+</div>
+
+<div class="col-sm-6 col-lg-6 col-md-6">
+    <div>
+        <p style="text-align: justify; color: #ff0000; font-size: 25px">  Mo Ta: </p>
+        @Model.MoTa
+    </div>
+
+    <div>
+        <p style="color:#ff0000;font-size:25px"> Gia: </p>
+         @Model.GiaBan VND
+
+    </div>
+
+    <div class="dathang">
+       
+        <a href="@Url.Action("ThemGioHang","GioHang",new { @imasp=Model.MaSP,@strURL=Request.Url.ToString()})">Thêm vào giỏ hàng </a>
+    </div>
+</div>
+
+<style>
+    .dathang {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        float:right;
+    }
+
+    .dathang:hover {
+        background-color: #4CAF50;
+        color: white;
+    }
+</style>
